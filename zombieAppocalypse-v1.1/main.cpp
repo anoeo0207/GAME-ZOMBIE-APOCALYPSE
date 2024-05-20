@@ -292,7 +292,7 @@ void runningGame (SDL_Event &e, bool &shootCheck, bool &bulletDirectionLeft) {
         renderMap(renderer, map);
         if (pause) {
             pauseGame(zombieVector);
-            pauseGameBoard(renderer, pauseBoard, continueButton, backToMenuButton, playGame, inMenu, pause, moveLeft, moveRight, moveUp, moveDown, velocityCharacter, velocityZombie, characterX, characterY, killCount, bulletVector);
+            pauseGameBoard(renderer, pauseBoard, continueButton, backToMenuButton, playGame, inMenu, pause, moveLeft, moveRight, moveUp, moveDown, velocityCharacter, velocityZombie, characterX, characterY, killCount, lifeRemain, bulletVector);
         } 
         else {
             displayZombies(zombieVector, bulletVector, killCount);

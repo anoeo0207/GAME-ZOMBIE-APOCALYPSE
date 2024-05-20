@@ -3,7 +3,7 @@
 #include "displayTextHeader.h"
 #include "struct.h"
 
-void pauseGameBoard (SDL_Renderer *renderer, SDL_Texture *pauseBoard, SDL_Texture *continueButton, SDL_Texture *backToMenuButton, bool &playGame, bool &inMenu, bool &pause, bool &moveLeft, bool &moveRight, bool &moveUp, bool &moveDown, int &velChar, int &velZom, int &X, int &Y, int &killCount, std::vector<BULLET> &bulletVector) {
+void pauseGameBoard (SDL_Renderer *renderer, SDL_Texture *pauseBoard, SDL_Texture *continueButton, SDL_Texture *backToMenuButton, bool &playGame, bool &inMenu, bool &pause, bool &moveLeft, bool &moveRight, bool &moveUp, bool &moveDown, int &velChar, int &velZom, int &X, int &Y, int &killCount, int &lifeRemain, std::vector<BULLET> &bulletVector) {
     
     SDL_Rect pauseBoardR = {330,250,370,200};
     SDL_Rect continueButtonR = {370, 320, 130,130};
@@ -37,6 +37,7 @@ void pauseGameBoard (SDL_Renderer *renderer, SDL_Texture *pauseBoard, SDL_Textur
                         } else if (mouseX >= backToMenuButtonR.x && mouseX <= backToMenuButtonR.x + backToMenuButtonR.w && mouseY >= backToMenuButtonR.y && mouseY <= backToMenuButtonR.y + backToMenuButtonR.h) {
                             bulletVector.clear();
                             killCount = 0;
+                            lifeRemain = 3;
                             X = 100;
                             Y = 260;
                             velChar = 8;
